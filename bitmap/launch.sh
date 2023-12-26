@@ -61,13 +61,25 @@ elif [[ "$1" == "--forest" ]]; then
 	style="forest"
 	launch_bar
 
+elif [[ "$1" == "--pwidgets" ]]; then
+	style="pwidgets"
+	launch_bar
+
+elif [[ "$1" == "--panels" ]]; then
+	style="panels"
+	launch_bar
+	
+elif [[ "$1" == "--evergreen" ]]; then
+	style="evergreen"
+	launch_bar
+
 else
 	cat <<- EOF
 	Usage : launch.sh --theme
 		
 	Available Themes :
-	--blocks    --colorblocks    --cuts      --docky
+	--blocks    --colorblocks    --cuts      --docky    --evergreen
 	--forest    --grayblocks     --hack      --material
-	--shades    --shapes
+	--panels    --pwidgets       --shades    --shapes
 	EOF
 fi
